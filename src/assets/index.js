@@ -21,12 +21,16 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
+// import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+// import starbucks from "./company/starbucks.png";
+// import tesla from "./company/tesla.png";
+
+import VetCare from "./VetCare.jpeg";
+import ChatApp from "./ChatApp.png";
 
 import carrent from "./carrent.png";
+import AirEv from "./AirEv.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
@@ -47,16 +51,19 @@ export {
   javascript,
   mongodb,
   nodejs,
+  AirEv,
   reactjs,
   redux,
   tailwind,
   typescript,
   threejs,
-  meta,
+  // meta,
   shopify,
-  starbucks,
-  tesla,
+  // starbucks,
+  VetCare,
+  ChatApp,
+  // tesla,
   carrent,
-  jobit,
-  tripguide,
+  // jobit,
+  // tripguide,
 };
