@@ -18,6 +18,7 @@ import {
   ChatApp,
   figma,
   docker,
+  Youtube,
   // meta,
   // starbucks,
   // tesla,
@@ -275,23 +276,23 @@ const projects = [
   {
     name: "Youtube Clone",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A exact clone to the original youtube using youtube API where you can wtach videos for free. ",
     tags: [
       {
-        name: "nextjs",
+        name: "API Calling",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Firebase",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Tailwind CSS",
         color: "pink-text-gradient",
       },
     ],
-    image: VetCare,
-    source_code_link: "https://github.com/",
+    image: Youtube,
+    source_code_link: "https://github.com/OctoCat-r/YoutubeClone.git",
   },
 ];
 

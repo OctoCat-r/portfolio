@@ -28,9 +28,11 @@ import shopify from "./company/shopify.png";
 
 import VetCare from "./VetCare.jpeg";
 import ChatApp from "./ChatApp.png";
+import Youtube from "./Youtube.png";
+import AirEv from "./AirEv.png";
 
 import carrent from "./carrent.png";
-import AirEv from "./AirEv.png";
+
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
@@ -62,6 +64,7 @@ export {
   // starbucks,
   VetCare,
   ChatApp,
+  Youtube,
   // tesla,
   carrent,
   // jobit,
