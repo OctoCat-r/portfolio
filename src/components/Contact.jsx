@@ -5,7 +5,9 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { slideIn } from "../utility/motion";
-
+// template_xw30p6v
+// service_guesfej
+// mIaJ1bDyRvkBzVqW0
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -32,21 +34,23 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        "service_guesfej",
+        "template_upnftkc",
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Aman Jain",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "godhaaman26@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        "mIaJ1bDyRvkBzVqW0"
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert(
+            `Thank you ${form.name}. I will get back to you as soon as possible.`
+          );
 
           setForm({
             name: "",
@@ -71,7 +75,12 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className="font-mono text-cyan-400 text-center text-3xl">Get in touch with me</p>
+        <p className="font-mono text-cyan-400 text-center text-3xl">
+          Get in touch with me
+        </p>
+        <p className="font-mono text-white text-center text-1xl">
+          Share your feedback
+        </p>
         {/* <h3 className="font-serif... text-7xl">Contact</h3> */}
 
         <form

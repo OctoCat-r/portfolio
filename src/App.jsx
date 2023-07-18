@@ -19,7 +19,7 @@ const App = () => {
           <Navbar />
           <Hero />
         {/* </div> */}
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
         <About />
         <Experience />
         <Tech />
@@ -27,7 +27,7 @@ const App = () => {
        
         <div className="relative z-0">
           <Contact />
-          {/* <StarsCanvas /> */}
+          <StarsCanvas />
         </div>
       </div>
     </BrowserRouter>
