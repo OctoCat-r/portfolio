@@ -7,6 +7,7 @@ import CanvasLoader from "../Loader";
 
 const Computers = ({ forMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+  console.log(forMobile);
   return (
     <mesh>
       <hemisphereLight intensity={0.35} groundColor="black" />
@@ -21,9 +22,9 @@ const Computers = ({ forMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={forMobile ? 0.7 : 0.75}
-        position={forMobile ? [0, -3, -2.2] : [0, -3.75, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={forMobile ? 0.35 : 0.75}
+        position={forMobile ? [0, -1.7, -1.1] : [0, -3.75, -1.3]}
+        rotation={[-0.01, -0.5, -0.1]}
       />
     </mesh>
   );
@@ -51,7 +52,7 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
-      camera={{ position:[20, 2, 5], fov: 25 }}
+      camera={{ position: [20, 2, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>

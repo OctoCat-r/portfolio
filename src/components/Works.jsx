@@ -1,5 +1,6 @@
 import React from "react";
 import { Tilt } from "react-tilt";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -15,13 +16,15 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  forMobile,
 }) => {
+  console.log(forMobile);
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} >
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{
           max: 45,
-          scale: 1.5,
+          scale: 1.2,
           speed: 550,
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
@@ -48,7 +51,9 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px] font-serif...">{name}</h3>
+          <h3 className="text-white font-bold text-[24px] font-serif...">
+            {name}
+          </h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
@@ -68,6 +73,23 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const [forMobile, setForMobile] = useState(false);
+
+  useEffect(() => {
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    setForMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setForMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -90,7 +112,12 @@ const Works = () => {
 
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard
+            key={`project-${index}`}
+            forMobile={forMobile}
+            index={index}
+            {...project}
+          />
         ))}
       </div>
     </>
