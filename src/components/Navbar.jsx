@@ -24,7 +24,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <p className="text-violet-500 text-[20px] font-bold cursor-pointer flex ">
+          <p className="text-violet-500 text-[25px] font-bold cursor-pointer flex ">
             Aman Jain
           </p>
         </Link>
@@ -61,8 +61,8 @@ const Navbar = () => {
                     active === nav.title ? "text-white" : "text-secondary"
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
-                    setToggle(!toggle);
                     setActive(nav.title);
+                    setToggle(!toggle);
                   }}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
