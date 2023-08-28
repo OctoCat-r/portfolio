@@ -35,11 +35,15 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "Experience",
-    title: "Experience",
+    id: "experience",
+    title: "Work",
   },
   {
-    id: "projects",
+    id: "tech",
+    title: "Tech Stack",
+  },
+  {
+    id: "works",
     title: "Projects",
   },
   {
@@ -297,7 +301,8 @@ const projects = [
     ],
     image: Youtube,
     source_code_link: "https://github.com/OctoCat-r/YoutubeClone.git",
+    app_link : "https://youtube-clone-y3w7.onrender.com/"
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences,  projects };

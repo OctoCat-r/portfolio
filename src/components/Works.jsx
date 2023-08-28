@@ -16,6 +16,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  app_link,
   forMobile,
 }) => {
   console.log(forMobile);
@@ -24,12 +25,15 @@ const ProjectCard = ({
       <Tilt
         options={{
           max: 45,
-          scale: 1.2,
+          scale: 1.0,
           speed: 550,
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className="relative w-full h-[150px]">
+        <div
+          className="relative w-full h-[150px]"
+          onClick={() => app_link ? window.open(app_link, "_blank") : ""}
+        >
           <img
             src={image}
             alt="project_image"
