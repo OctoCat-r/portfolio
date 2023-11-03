@@ -19,6 +19,8 @@ import {
   figma,
   docker,
   Youtube,
+  Cpp,
+  dsa,
   // meta,
   // starbucks,
   // tesla,
@@ -67,6 +69,10 @@ const services = [
   },
   {
     title: "Frontend Developer",
+    icon: creator,
+  },
+  {
+    title: "Software Developer",
     icon: creator,
   },
   // {
@@ -127,6 +133,15 @@ const technologies = [
   {
     name: "docker",
     icon: docker,
+  },
+
+  {
+    name: "DSA",
+    icon: dsa,
+  },
+  {
+    name: "C++",
+    icon: Cpp,
   },
 ];
 

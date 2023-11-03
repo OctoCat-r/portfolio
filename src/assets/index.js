@@ -31,6 +31,10 @@ import ChatApp from "./ChatApp.png";
 import Youtube from "./Youtube.png";
 import AirEv from "./AirEv.png";
 
+import dsa from "./tech/dsa.png";
+
+import Cpp from "./tech/Cpp.png";
+
 import carrent from "./carrent.png";
 
 import jobit from "./jobit.png";
@@ -59,6 +63,8 @@ export {
   tailwind,
   typescript,
   threejs,
+  Cpp,
+  dsa,
   // meta,
   shopify,
   // starbucks,
